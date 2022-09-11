@@ -52,6 +52,8 @@ struct TomateTimer {
         }
     }
 
+    var elapsedTime: TimeInterval { totalTime - timeRemaining }
+
     /// Percentile progress for the timer (between 0 and 1)
     var progress: Progress {
         assert(timeRemaining <= totalTime, "Time Remaining should never be over total time")
