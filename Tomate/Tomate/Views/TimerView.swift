@@ -7,19 +7,21 @@ struct TimerView: View {
     private let formatter: DateComponentsFormatter = .timerFormatter
 
     var body: some View {
-        VStack {
-            Text(formattedTime!).font(.system(.title))
-            ProgressView(value: timer.progress)
-            HStack {
-                ForEach(timer.availableActions) { action in
-                    Button(action.title) {
-                        timer.perform(action: action)
+        TimelineView(.periodic(from: .now, by: 1)) { _ in
+            VStack {
+                Text(formattedTime!).font(.system(.title))
+                ProgressView(value: timer.progress)
+                HStack {
+                    ForEach(timer.availableActions) { action in
+                        Button(action.title) {
+                            timer.perform(action: action)
+                        }
+                        .buttonStyle(.borderedProminent)
                     }
-                    .buttonStyle(.borderedProminent)
                 }
             }
+            .padding()
         }
-        .padding()
     }
 
     var formattedTime: String? {
