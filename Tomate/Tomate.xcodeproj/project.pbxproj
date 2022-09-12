@@ -16,7 +16,7 @@
 		0190489028CB85AB006F0D80 /* Comparable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190488F28CB85AB006F0D80 /* Comparable+Extensions.swift */; };
 		0190489228CB897F006F0D80 /* TimerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190489128CB897F006F0D80 /* TimerFormatter.swift */; };
 		019317B828CE20AB00BDE839 /* TimerProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019317B728CE20AB00BDE839 /* TimerProgressView.swift */; };
-		019317BA28CE20D400BDE839 /* TimerGaugeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019317B928CE20D400BDE839 /* TimerGaugeStyle.swift */; };
+		019317BA28CE20D400BDE839 /* TimerProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019317B928CE20D400BDE839 /* TimerProgressViewStyle.swift */; };
 		01BA039D28CDEB2C001B3C0E /* Font+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BA039C28CDEB2C001B3C0E /* Font+extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +50,7 @@
 		0190488F28CB85AB006F0D80 /* Comparable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comparable+Extensions.swift"; sourceTree = "<group>"; };
 		0190489128CB897F006F0D80 /* TimerFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFormatter.swift; sourceTree = "<group>"; };
 		019317B728CE20AB00BDE839 /* TimerProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProgressView.swift; sourceTree = "<group>"; };
-		019317B928CE20D400BDE839 /* TimerGaugeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGaugeStyle.swift; sourceTree = "<group>"; };
+		019317B928CE20D400BDE839 /* TimerProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProgressViewStyle.swift; sourceTree = "<group>"; };
 		01BA039C28CDEB2C001B3C0E /* Font+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +132,7 @@
 			children = (
 				0190486028CB78AB006F0D80 /* TimerView.swift */,
 				019317B728CE20AB00BDE839 /* TimerProgressView.swift */,
-				019317B928CE20D400BDE839 /* TimerGaugeStyle.swift */,
+				019317B928CE20D400BDE839 /* TimerProgressViewStyle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,7 +296,7 @@
 				0190488D28CB78E3006F0D80 /* TomateTimer.swift in Sources */,
 				0190486128CB78AB006F0D80 /* TimerView.swift in Sources */,
 				0190489228CB897F006F0D80 /* TimerFormatter.swift in Sources */,
-				019317BA28CE20D400BDE839 /* TimerGaugeStyle.swift in Sources */,
+				019317BA28CE20D400BDE839 /* TimerProgressViewStyle.swift in Sources */,
 				0190485F28CB78AB006F0D80 /* TomateApp.swift in Sources */,
 				019317B828CE20AB00BDE839 /* TimerProgressView.swift in Sources */,
 				01BA039D28CDEB2C001B3C0E /* Font+extensions.swift in Sources */,
