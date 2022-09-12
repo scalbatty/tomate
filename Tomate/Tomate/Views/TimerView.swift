@@ -17,13 +17,10 @@ struct TimerView: View {
     var body: some View {
         VStack {
             TimelineView(.periodic(from: .now, by: 1)) { _ in
-                Gauge(
-                    value: timer.elapsedTime,
-                    in: 0...timer.totalTime
-                ) {
+                ProgressView(value: timer.progress) {
                     Text(formattedTime!)
                 }
-                .gaugeStyle(.timer)
+                .progressViewStyle(.timer)
             }
             HStack {
                 ForEach(timer.availableActions) { action in

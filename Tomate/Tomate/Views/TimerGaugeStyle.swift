@@ -1,12 +1,12 @@
 import SwiftUI
 
-struct TimerGaugeStyle: GaugeStyle {
+struct TimerProgressViewStyle: ProgressViewStyle {
     private static let width: CGFloat = 250
     private static let height: CGFloat = 250
 
     func makeBody(configuration: Configuration) -> some View {
         ZStack {
-            TimerGauge(value: configuration.value)
+            TimerProgressView(value: configuration.fractionCompleted)
                 .frame(width: Self.width,
                        height: Self.width)
             configuration.label
@@ -15,6 +15,6 @@ struct TimerGaugeStyle: GaugeStyle {
     }
 }
 
-extension GaugeStyle where Self == TimerGaugeStyle {
-    static var timer: TimerGaugeStyle { TimerGaugeStyle() }
+extension ProgressViewStyle where Self == TimerProgressViewStyle {
+    static var timer: TimerProgressViewStyle { TimerProgressViewStyle() }
 }

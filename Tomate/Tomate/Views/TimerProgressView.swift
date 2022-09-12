@@ -1,11 +1,12 @@
 import SwiftUI
 
-struct TimerGauge: View {
+struct TimerProgressView: View {
     private static let boundsWhenPositive: ClosedRange<Double> = 0.177...1.0
 
-    var value: Double
+    var value: Double?
 
     var sanitizedValue: Double {
+        guard let value = value else { return 0 }
         if value <= 0 {
             return 0
         } else {
@@ -41,11 +42,11 @@ struct TimerGauge: View {
     }
 }
 
-struct TimerGauge_Previews: PreviewProvider {
+struct TimerProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerGauge(value: 0)
-        TimerGauge(value: 0.001)
-        TimerGauge(value: 0.3)
-        TimerGauge(value: 1.0)
+        TimerProgressView(value: 0)
+        TimerProgressView(value: 0.001)
+        TimerProgressView(value: 0.3)
+        TimerProgressView(value: 1.0)
     }
 }
