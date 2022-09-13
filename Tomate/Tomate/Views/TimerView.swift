@@ -3,6 +3,7 @@ import Combine
 
 struct TimerView: View {
     @State var timer: TomateTimer
+    @State var isShowingTimerSelectionModal: Bool = false
 
     private let formatter: DateComponentsFormatter = .timerFormatter
 
@@ -10,7 +11,13 @@ struct TimerView: View {
         VStack {
             TimelineView(.periodic(from: .now, by: 1)) { _ in
                 ProgressView(value: timer.progress) {
-                    Text(formattedTime!)
+                    if timer.hasStarted {
+                        Text(formattedTime!)
+                    } else {
+                        Button(formattedTime!) {
+                            isShowingTimerSelectionModal = true
+                        }
+                    }
                 }
                 .progressViewStyle(.timer)
             }
@@ -23,11 +30,19 @@ struct TimerView: View {
                 }
             }
         }
-        .padding()
+        .sheet(isPresented: $isShowingTimerSelectionModal) {
+            TimeSelectionView()
+        }
     }
 
     var formattedTime: String? {
         formatter.string(from: timer.timeRemaining)
+    }
+}
+
+struct TimeSelectionView: View {
+    var body: some View {
+        Text("Select time here")
     }
 }
 

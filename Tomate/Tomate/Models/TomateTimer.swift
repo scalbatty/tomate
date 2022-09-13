@@ -65,6 +65,15 @@ struct TomateTimer {
         timeRemaining <= 0
     }
 
+    var hasStarted: Bool {
+        switch status {
+        case .stopped:
+            return false
+        case .paused, .running:
+            return true
+        }
+    }
+
     // MARK: Action handling
 
     /// A list of actions available for the current state of the timer
