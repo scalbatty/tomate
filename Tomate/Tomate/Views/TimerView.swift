@@ -1,14 +1,6 @@
 import SwiftUI
 import Combine
 
-extension Font {
-    static let timer: Font = .system(
-        size: 48,
-        weight: .light,
-        design: .rounded
-    )
-}
-
 struct TimerView: View {
     @State var timer: TomateTimer
 
@@ -27,7 +19,7 @@ struct TimerView: View {
                     Button(action.title) {
                         timer.perform(action: action)
                     }
-                    .buttonStyle(.borderedProminent)
+                    .buttonStyle(.timerAction)
                 }
             }
         }

@@ -4,7 +4,7 @@ import SwiftUI
 struct TomateApp: App {
     var body: some Scene {
         WindowGroup {
-            TimerView(timer: TomateTimer(status: .stopped))
+            TimerView(timer: TomateTimer(status: .stopped)).tint(.orange)
         }
     }
 }

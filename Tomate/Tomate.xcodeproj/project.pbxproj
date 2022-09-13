@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01190D9028D0A8C100D2E5A3 /* TimerButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01190D8F28D0A8C100D2E5A3 /* TimerButtonStyle.swift */; };
 		0190485F28CB78AB006F0D80 /* TomateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190485E28CB78AB006F0D80 /* TomateApp.swift */; };
 		0190486128CB78AB006F0D80 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190486028CB78AB006F0D80 /* TimerView.swift */; };
 		0190486328CB78AB006F0D80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0190486228CB78AB006F0D80 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01190D8F28D0A8C100D2E5A3 /* TimerButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonStyle.swift; sourceTree = "<group>"; };
 		0190485B28CB78AB006F0D80 /* Tomate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0190485E28CB78AB006F0D80 /* TomateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomateApp.swift; sourceTree = "<group>"; };
 		0190486028CB78AB006F0D80 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				0190486028CB78AB006F0D80 /* TimerView.swift */,
 				019317B728CE20AB00BDE839 /* TimerProgressView.swift */,
 				019317B928CE20D400BDE839 /* TimerProgressViewStyle.swift */,
+				01190D8F28D0A8C100D2E5A3 /* TimerButtonStyle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				019317B828CE20AB00BDE839 /* TimerProgressView.swift in Sources */,
 				01BA039D28CDEB2C001B3C0E /* Font+extensions.swift in Sources */,
 				0190489028CB85AB006F0D80 /* Comparable+Extensions.swift in Sources */,
+				01190D9028D0A8C100D2E5A3 /* TimerButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
