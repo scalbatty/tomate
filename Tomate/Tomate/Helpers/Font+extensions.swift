@@ -8,7 +8,7 @@ extension Font {
     )
 
     static let actionButton: Font = .system(
-        size: 20,
+        size: 36,
         weight: .bold,
         design: .rounded
     )
