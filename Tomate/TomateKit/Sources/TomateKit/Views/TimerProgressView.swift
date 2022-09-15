@@ -9,7 +9,11 @@ struct TimerProgressView: View {
         ZStack {
             Self.makeCircle(Color(white: 0.85))
             Self.makeCircle(
-                Gradient(colors: [.orange, .red]),
+                .linearGradient(
+                    Gradient(colors: [.orange, .red]),
+                    startPoint: .top,
+                    endPoint: .bottom
+                ),
                 value: value ?? 0
             )
         }
