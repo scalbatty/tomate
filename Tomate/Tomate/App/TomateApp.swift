@@ -1,4 +1,5 @@
 import SwiftUI
+import TomateKit
 
 @main
 struct TomateApp: App {

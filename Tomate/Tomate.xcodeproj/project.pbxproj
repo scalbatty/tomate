@@ -7,18 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01190D9028D0A8C100D2E5A3 /* TimerButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01190D8F28D0A8C100D2E5A3 /* TimerButtonStyle.swift */; };
 		0190485F28CB78AB006F0D80 /* TomateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190485E28CB78AB006F0D80 /* TomateApp.swift */; };
-		0190486128CB78AB006F0D80 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190486028CB78AB006F0D80 /* TimerView.swift */; };
 		0190486328CB78AB006F0D80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0190486228CB78AB006F0D80 /* Assets.xcassets */; };
 		0190486628CB78AB006F0D80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0190486528CB78AB006F0D80 /* Preview Assets.xcassets */; };
 		0190487028CB78AB006F0D80 /* TomateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190486F28CB78AB006F0D80 /* TomateTests.swift */; };
-		0190488D28CB78E3006F0D80 /* TomateTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190488C28CB78E3006F0D80 /* TomateTimer.swift */; };
-		0190489028CB85AB006F0D80 /* Comparable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190488F28CB85AB006F0D80 /* Comparable+Extensions.swift */; };
-		0190489228CB897F006F0D80 /* TimerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190489128CB897F006F0D80 /* TimerFormatter.swift */; };
-		019317B828CE20AB00BDE839 /* TimerProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019317B728CE20AB00BDE839 /* TimerProgressView.swift */; };
-		019317BA28CE20D400BDE839 /* TimerProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019317B928CE20D400BDE839 /* TimerProgressViewStyle.swift */; };
-		01BA039D28CDEB2C001B3C0E /* Font+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BA039C28CDEB2C001B3C0E /* Font+extensions.swift */; };
+		01F48FD128D32A5C00C1A014 /* TomateKit in Frameworks */ = {isa = PBXBuildFile; productRef = 01F48FD028D32A5C00C1A014 /* TomateKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,21 +32,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01190D8F28D0A8C100D2E5A3 /* TimerButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonStyle.swift; sourceTree = "<group>"; };
 		0190485B28CB78AB006F0D80 /* Tomate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0190485E28CB78AB006F0D80 /* TomateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomateApp.swift; sourceTree = "<group>"; };
-		0190486028CB78AB006F0D80 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		0190486228CB78AB006F0D80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0190486528CB78AB006F0D80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0190486B28CB78AB006F0D80 /* TomateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0190486F28CB78AB006F0D80 /* TomateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomateTests.swift; sourceTree = "<group>"; };
 		0190487528CB78AB006F0D80 /* TomateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0190488C28CB78E3006F0D80 /* TomateTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomateTimer.swift; sourceTree = "<group>"; };
-		0190488F28CB85AB006F0D80 /* Comparable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comparable+Extensions.swift"; sourceTree = "<group>"; };
-		0190489128CB897F006F0D80 /* TimerFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFormatter.swift; sourceTree = "<group>"; };
-		019317B728CE20AB00BDE839 /* TimerProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProgressView.swift; sourceTree = "<group>"; };
-		019317B928CE20D400BDE839 /* TimerProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProgressViewStyle.swift; sourceTree = "<group>"; };
-		01BA039C28CDEB2C001B3C0E /* Font+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+extensions.swift"; sourceTree = "<group>"; };
+		01CF177F28D321B40008D829 /* TomateKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TomateKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F48FD128D32A5C00C1A014 /* TomateKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,9 +71,11 @@
 		0190485228CB78AB006F0D80 = {
 			isa = PBXGroup;
 			children = (
+				01CF177F28D321B40008D829 /* TomateKit */,
 				0190485D28CB78AB006F0D80 /* Tomate */,
 				0190486E28CB78AB006F0D80 /* TomateTests */,
 				0190485C28CB78AB006F0D80 /* Products */,
+				01F48FCF28D32A5C00C1A014 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,10 +92,7 @@
 		0190485D28CB78AB006F0D80 /* Tomate */ = {
 			isa = PBXGroup;
 			children = (
-				0190488E28CB8595006F0D80 /* Helpers */,
-				0190488B28CB78DC006F0D80 /* Models */,
 				0190488A28CB78D8006F0D80 /* App */,
-				0190488928CB78D3006F0D80 /* Views */,
 				0190486228CB78AB006F0D80 /* Assets.xcassets */,
 				0190486428CB78AB006F0D80 /* Preview Content */,
 			);
@@ -129,17 +115,6 @@
 			path = TomateTests;
 			sourceTree = "<group>";
 		};
-		0190488928CB78D3006F0D80 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0190486028CB78AB006F0D80 /* TimerView.swift */,
-				019317B728CE20AB00BDE839 /* TimerProgressView.swift */,
-				019317B928CE20D400BDE839 /* TimerProgressViewStyle.swift */,
-				01190D8F28D0A8C100D2E5A3 /* TimerButtonStyle.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		0190488A28CB78D8006F0D80 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,22 +123,11 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		0190488B28CB78DC006F0D80 /* Models */ = {
+		01F48FCF28D32A5C00C1A014 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0190488C28CB78E3006F0D80 /* TomateTimer.swift */,
 			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		0190488E28CB8595006F0D80 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				0190488F28CB85AB006F0D80 /* Comparable+Extensions.swift */,
-				0190489128CB897F006F0D80 /* TimerFormatter.swift */,
-				01BA039C28CDEB2C001B3C0E /* Font+extensions.swift */,
-			);
-			path = Helpers;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +146,9 @@
 			dependencies = (
 			);
 			name = Tomate;
+			packageProductDependencies = (
+				01F48FD028D32A5C00C1A014 /* TomateKit */,
+			);
 			productName = Tomate;
 			productReference = 0190485B28CB78AB006F0D80 /* Tomate.app */;
 			productType = "com.apple.product-type.application";
@@ -296,15 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0190488D28CB78E3006F0D80 /* TomateTimer.swift in Sources */,
-				0190486128CB78AB006F0D80 /* TimerView.swift in Sources */,
-				0190489228CB897F006F0D80 /* TimerFormatter.swift in Sources */,
-				019317BA28CE20D400BDE839 /* TimerProgressViewStyle.swift in Sources */,
 				0190485F28CB78AB006F0D80 /* TomateApp.swift in Sources */,
-				019317B828CE20AB00BDE839 /* TimerProgressView.swift in Sources */,
-				01BA039D28CDEB2C001B3C0E /* Font+extensions.swift in Sources */,
-				0190489028CB85AB006F0D80 /* Comparable+Extensions.swift in Sources */,
-				01190D9028D0A8C100D2E5A3 /* TimerButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +596,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01F48FD028D32A5C00C1A014 /* TomateKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TomateKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0190485328CB78AB006F0D80 /* Project object */;
 }

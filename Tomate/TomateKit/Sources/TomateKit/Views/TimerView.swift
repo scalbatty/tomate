@@ -1,13 +1,18 @@
 import SwiftUI
 import Combine
 
-struct TimerView: View {
-    @State var timer: TomateTimer
-    @State var isShowingTimerSelectionModal: Bool = false
+public struct TimerView: View {
+
+    @State public var timer: TomateTimer
+    @State public var isShowingTimerSelectionModal: Bool = false
 
     private let formatter: DateComponentsFormatter = .timerFormatter
 
-    var body: some View {
+    public init(timer: TomateTimer) {
+        _timer = State(initialValue: timer)
+    }
+
+    public var body: some View {
         VStack {
             TimelineView(.periodic(from: .now, by: 1)) { _ in
                 ProgressView(value: timer.progress) {

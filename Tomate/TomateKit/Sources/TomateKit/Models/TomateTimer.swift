@@ -1,26 +1,26 @@
 import Foundation
 
-struct TomateTimer {
+public struct TomateTimer {
     /// A percentile value between 0 and 1
-    typealias Progress = Float
+    public typealias Progress = Float
 
     private static let defaultTotalTime: TimeInterval = 25 * 60
 
-    enum Status {
+    public enum Status {
         case stopped // Initial state, waiting for start
         case running(dueDate: Date) // Running, time will be up at dueDate
         case paused(timeRemaining: TimeInterval) // Paused, waiting to continue with remaining time (is this even useful?)
     }
 
-    enum Action: Int, Identifiable {
+    public enum Action: Int, Identifiable {
         case start
         case stop
         case pause
         case resume
 
-        var id: Int { rawValue }
+        public var id: Int { rawValue }
 
-        var title: String {
+        public var title: String {
             switch self {
             case .start:
                 return "Start"
@@ -34,14 +34,18 @@ struct TomateTimer {
         }
     }
 
-    var status: Status
-    let totalTime: TimeInterval = defaultTotalTime
+    public var status: Status
+    public let totalTime: TimeInterval = defaultTotalTime
+
+    public init(status: TomateTimer.Status) {
+        self.status = status
+    }
 
     // TODO: This will not work for mocking and unit tests, need a way to inject current time
-    private var now: Date { Date.now }
+    private var now: Date { Date() }
 
     /// Remaining time on the timer. Minimum value is 0
-    var timeRemaining: TimeInterval {
+    public var timeRemaining: TimeInterval {
         switch status {
         case .stopped:
             return totalTime
@@ -52,20 +56,20 @@ struct TomateTimer {
         }
     }
 
-    var elapsedTime: TimeInterval { totalTime - timeRemaining }
+    public var elapsedTime: TimeInterval { totalTime - timeRemaining }
 
     /// Percentile progress for the timer (between 0 and 1)
-    var progress: Progress {
+    public var progress: Progress {
         assert(timeRemaining <= totalTime, "Time Remaining should never be over total time")
         return 1 - Progress(timeRemaining / totalTime).clamped(to: 0...1)
     }
 
     /// True if the time remaining is 0 or less
-    var timeIsUp: Bool {
+    public var timeIsUp: Bool {
         timeRemaining <= 0
     }
 
-    var hasStarted: Bool {
+    public var hasStarted: Bool {
         switch status {
         case .stopped:
             return false
@@ -77,7 +81,7 @@ struct TomateTimer {
     // MARK: Action handling
 
     /// A list of actions available for the current state of the timer
-    var availableActions: [Action] {
+    public var availableActions: [Action] {
         switch status {
         case .stopped:
             return [.start]
@@ -93,7 +97,7 @@ struct TomateTimer {
     }
 
     /// Asks the timer to perform the required action
-    mutating func perform(action: Action) {
+    public mutating func perform(action: Action) {
         assert(availableActions.contains(action), "Attempting to run an unavailable action")
 
         switch action {
