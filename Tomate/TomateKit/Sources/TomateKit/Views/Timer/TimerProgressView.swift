@@ -16,6 +16,7 @@ struct TimerProgressView: View {
                 ),
                 value: value ?? 0
             )
+            .shadow(color: .orange, radius: 10)
         }
         .padding()
     }
