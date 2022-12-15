@@ -4,25 +4,32 @@ struct TimerProgressView: View {
     private static let circleRange: ClosedRange<Double> = 0.15...0.85
 
     var value: Double?
+    var thickness: CGFloat = 30
+    var shadowRadius: CGFloat = 5
+
+    @Environment(\.colorScheme) var colorScheme
+
+    private static let backgroundLight = Color(white: 0.85)
+    private static let backgroundDark = Color(white: 0.25)
 
     var body: some View {
         ZStack {
-            Self.makeCircle(Color(white: 0.85))
             Self.makeCircle(
-                .linearGradient(
-                    Gradient(colors: [.orange, .red]),
-                    startPoint: .top,
-                    endPoint: .bottom
-                ),
+                colorScheme == .dark ? Self.backgroundDark : Self.backgroundLight,
+                lineWidth: self.thickness
+            )
+            Self.makeCircle(
+                Color.accentColor.gradient,
+                lineWidth: self.thickness,
                 value: value ?? 0
             )
-            .shadow(color: .orange, radius: 10)
         }
-        .padding()
+        .padding(thickness / 2)
     }
 
     private static func makeCircle<S: ShapeStyle>(
         _ content: S,
+        lineWidth: CGFloat,
         value: Double = 1.0
     ) -> some View {
         Circle()
@@ -33,7 +40,7 @@ struct TimerProgressView: View {
             .stroke(
                 content,
                 style: StrokeStyle(
-                    lineWidth: 20,
+                    lineWidth: lineWidth,
                     lineCap: .round
                 )
             )

@@ -5,7 +5,7 @@ extension Font {
         size: 48,
         weight: .light,
         design: .rounded
-    )
+    ).monospacedDigit()
 
     static let actionButton: Font = .system(
         size: 36,

@@ -3,18 +3,18 @@ import Combine
 
 public struct TimerView: View {
 
-    @State public var timer: TomateTimer
+    @StateObject public var timer: TimerViewModel
     @State public var isShowingTimerSelectionModal: Bool = false
 
     private let formatter: DateComponentsFormatter = .timerFormatter
 
     public init(timer: TomateTimer) {
-        _timer = State(initialValue: timer)
+        _timer = StateObject(wrappedValue: TimerViewModel(timer: timer))
     }
 
     public var body: some View {
         VStack {
-            TimelineView(.periodic(from: .now, by: 1)) { _ in
+            TimelineView(.periodic(from: .now, by: 0.016)) { _ in
                 ProgressView(value: timer.progress) {
                     if timer.hasStarted {
                         Text(formattedTime!)
@@ -25,6 +25,7 @@ public struct TimerView: View {
                     }
                 }
                 .progressViewStyle(.timer)
+
             }
             HStack {
                 ForEach(timer.availableActions) { action in
@@ -36,18 +37,20 @@ public struct TimerView: View {
             }
         }
         .sheet(isPresented: $isShowingTimerSelectionModal) {
-            TimeSelectionView()
+            TimeSelectionView(
+                timer: timer
+            )
+        }
+        .onAppear {
+            UIApplication.shared.isIdleTimerDisabled = true
+        }
+        .onDisappear {
+            UIApplication.shared.isIdleTimerDisabled = false
         }
     }
 
     var formattedTime: String? {
         formatter.string(from: timer.timeRemaining)
-    }
-}
-
-struct TimeSelectionView: View {
-    var body: some View {
-        Text("Select time here")
     }
 }
 
@@ -58,3 +61,4 @@ struct TimerView_Previews: PreviewProvider {
         TimerView(timer: TomateTimer(status: .paused(timeRemaining: 23 * 60 + 34)))
     }
 }
+
